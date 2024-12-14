@@ -154,6 +154,28 @@ html{
   scroll-behavior: smooth;
   font-size: 10px;
 }
+
+body{
+  background-color: var(--eerie-black-1);
+  color: var(--white);
+  font-family: var(--fontFamily-dm_sans);
+  font-family: var(--fontSize-body-4);
+  font-weight: var(--weight-regular);
+  line-height: var(--lineHeight-5);
+  overflow: hidden;
+  height: 300vh;
+}
+
+body.loaded{
+  overflow: overlay;
+}
+
+body.nav-active{overflow: hidden;}
+
+::-webkit-scrollbar{width: 5px;}
+
+::-webkit-scrollbar-track{background: transparent;}
+::-webkit-scrollbar-trumb{background: var(--gold-crayola);}
 /*-----------------------------------*\
   #TYPOGRAPHY
 \*-----------------------------------*/
@@ -173,9 +195,23 @@ html{
 /*-----------------------------------*\
   #PRELOAD
 \*-----------------------------------*/
+.preload{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--gold-crayola);
+  z-index: 10;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  transition: var(--transition-2);
+}
 
+.preload.loaded > * { transition: var(--transition-1);}
 
-
+.preload.loaded > *{opacity: 0;}
 
 
 /*-----------------------------------*\
