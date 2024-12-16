@@ -346,7 +346,6 @@ body.nav-active{overflow: hidden;}
 
 .topbar{
   display: none;
-  
 }
 
 
@@ -356,7 +355,7 @@ body.nav-active{overflow: hidden;}
   #HEADER
 \*-----------------------------------*/
 
-.navbar,.overlay,.header .btn{display: none;}
+/* .navbar,.overlay,.header .btn{display: none;} */
 
 .header{
   position: fixed;
@@ -423,7 +422,7 @@ body.nav-active{overflow: hidden;}
   padding-block-end: 50px;
   overflow-y: auto;
   visibility: hidden;
-  z-index: 1000;
+  z-index: 2;
   transition: var(--transition-2);
 }
 
@@ -485,7 +484,11 @@ body.nav-active{overflow: hidden;}
 .navbar-link:is(:hover, :focus-visible, .active) .separator{opacity: 1;}
 
 .navbar-title{margin-block-end: 15px;}
+
 .navbar-text{margin-block: 10px;}
+
+.navbar .body-4 {color: var(--quick-silver);}
+
 .sidebar-link{transition: var(--transition-1);}
 
 .sidebar-link:is(:hover, :focus-visible){
@@ -498,6 +501,11 @@ body.nav-active{overflow: hidden;}
 }
 
 .navbar .body-4 {color: var(--quick-silver);}
+
+.navbar .contact-label{margin-block-end: 10px;}
+
+.navbar::-webkit-scrollbar-thumb{background-color: var(--white-alpha-10);}
+
 
 
 /*-----------------------------------*\
