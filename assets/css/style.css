@@ -617,9 +617,11 @@ body.nav-active{overflow: hidden;}
   #HERO
 \*-----------------------------------*/
 
-.hero .slider-btn{display: none;}
+
 
 .hero .slider-item{
+  margin-top: 200px;
+  padding: 100px 0;
   position: relative;
   top: 50%;
   left: 50%;
@@ -712,6 +714,8 @@ body.nav-active{overflow: hidden;}
 
 .hero .slider-item.active .section-subtitle{animation-delay: 500ms;}
 .hero .slider-item.active .hero-title{animation-delay: 1000ms;}
+.hero .slider-item.active .hero-text{animation-delay: 1.5s;}
+
 
 
 /*-----------------------------------*\
