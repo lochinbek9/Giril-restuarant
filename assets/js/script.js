@@ -57,8 +57,11 @@ window.addEventListener("scroll", function(){
 
 const heroSlider = document.querySelector("[data-hero-slider]");
 const heroSliderItems = document.querySelectorAll("[data-hero-slider-item]");
-const heroSliderPrevBtn = document.querySelector("[data-prev-btn]");
-const heroSliderNextBtn = document.querySelector("[data-next-btn]");
+const heroSliderPrevBtn = document.querySelector(".prev");
+const heroSliderNextBtn = document.querySelector(".next");
+
+console.log(heroSliderNextBtn);
+
 
 let currentSlidePos = 0;
 let lastActiveSliderItem = heroSliderItems[0];
@@ -77,8 +80,6 @@ function slideNext(){
     }
     updateSliderPos();
 }
-console.log(heroSliderNextBtn);
-
 
 heroSliderNextBtn.addEventListener("click", slideNext);
 
@@ -95,10 +96,10 @@ heroSliderPrevBtn.addEventListener("click", slidePrev);
 
 let autoSlideInterval;
 
-function startAuto(){
-    autoSlideInterval = setInterval((() =>{
+function autoSlide(){
+    autoSlideInterval = setInterval(function(){
         slideNext();
-    }, 7000));
+    }, 7000);
 }
 
 addEventOnElements([heroSliderNextBtn, heroSliderPrevBtn], 

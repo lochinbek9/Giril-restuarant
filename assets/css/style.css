@@ -635,11 +635,14 @@ body.nav-active{overflow: hidden;}
   visibility: hidden;
   transition: var(--transition-3);
   z-index: 0;
+  display: none;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .hero .slider-item.active{
   opacity: 1;
   visibility: visible;
+  display: block;
 }
 
 .hero .slider-bg{
